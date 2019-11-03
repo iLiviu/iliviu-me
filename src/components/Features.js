@@ -1,33 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
-const FeatureGrid = ({ gridItems }) => (
+const FeatureGrid = ({ items }) => (
   <div className="columns is-multiline">
-    {gridItems.map(item => (
-      <div key={item.text} className="column is-6">
-        <section className="section">
-          <div className="has-text-centered">
-            <div
-              style={{
-                width: '240px',
-                display: 'inline-block',
-              }}
-            >
-              <PreviewCompatibleImage imageInfo={item} />
+    {items.map(({ node: item }) => (
+      <div key={item.frontmatter.title} className="column is-6">
+        <div className=" card">
+          <div className="card-content">
+            <div className="title">
+              {item.frontmatter.title}
             </div>
+            <p className="has-text-justified">{item.frontmatter.description}</p>
           </div>
-          <p>{item.text}</p>
-        </section>
+          <footer className="card-footer">
+            <a href={item.frontmatter.url} className="card-footer-item">Mergi la aplicație</a>
+            {item.frontmatter.gitUrl && <a href={item.frontmatter.gitUrl} className="card-footer-item">Github</a>}
+          </footer>
+        </div>
       </div>
     ))}
   </div>
 )
 
 FeatureGrid.propTypes = {
-  gridItems: PropTypes.arrayOf(
+  items: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+      title: PropTypes.string,
+      url: PropTypes.string,
+      gitUrl: PropTypes.string,
       text: PropTypes.string,
     })
   ),
