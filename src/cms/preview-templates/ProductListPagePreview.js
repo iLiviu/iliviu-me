@@ -1,23 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { ProductPageTemplate } from '../../templates/product-page'
+import { ProductListPageTemplate } from '../../templates/product-list'
 
-const ProductPagePreview = ({ entry, widgetFor }) => {
+const ProductListPagePreview = ({ entry }) => {
 
 
   return (
-    <ProductPageTemplate
+    <ProductListPageTemplate
       title={entry.getIn(['data', 'title'])}
       description={entry.getIn(['data', 'description'])}
-      content={widgetFor('body')}
+      products={[]}
     />
   )
 }
 
-ProductPagePreview.propTypes = {
+ProductListPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),
 }
 
-export default ProductPagePreview
+export default ProductListPagePreview

@@ -6,4 +6,6 @@ mainpitch:
   title: Cine sunt?
   description: >
     Sunt
+showProducts: true
+showLatestPosts: true
 ---

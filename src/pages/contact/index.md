@@ -1,6 +1,5 @@
 ---
 templateKey: 'contact-page'
-path: /contact
 title: Contact
 ---
 Mă puteți contacta pe email la liviu.iancuta (at) gmail (punct) com.

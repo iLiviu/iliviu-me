@@ -1,6 +1,5 @@
 ---
 templateKey: 'product-page'
-path: /road-to-fire
 title: Road To FIRE
 featured: true
 url: https://roadtofire.iliviu.me

@@ -10,6 +10,8 @@ export const IndexPageTemplate = ({
   title,
   subheading,
   mainpitch,
+  showProducts,
+  showLatestPosts,
   products,
   blogPosts,
 }) => (
@@ -41,13 +43,13 @@ export const IndexPageTemplate = ({
                     <h3 className="subtitle">{mainpitch.description}</h3>
                   </div>
                 </div>
-                <Features items={products} />
+                {showProducts && <Features items={products} />}
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="section">
+      {showLatestPosts && <section className="section">
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
@@ -63,7 +65,7 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-      </section>
+      </section>}
     </div>
   )
 
@@ -79,7 +81,7 @@ const IndexPage = ({ data }) => {
   const { frontmatter } = data.index
   const products = data.products.edges
   const blogPosts = data.blogPosts.edges
-  
+
   return (
     <Layout>
       <IndexPageTemplate
@@ -87,6 +89,8 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
+        showProducts={frontmatter.showProducts}
+        showLatestPosts={frontmatter.showLatestPosts}
         products={products}
         blogPosts={blogPosts}
       />
@@ -114,6 +118,8 @@ export const pageQuery = graphql`
           title
           description
         }
+        showProducts
+        showLatestPosts
       }
     }
     products: allMarkdownRemark(filter: {frontmatter: { templateKey: { eq: "product-page" }, featured: { eq: true } } }) {
@@ -121,7 +127,6 @@ export const pageQuery = graphql`
         node {
           frontmatter {
               title
-              path
               featured
               url
               gitUrl

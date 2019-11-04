@@ -33,7 +33,7 @@ export const ProductPageTemplate = ({
 ProductPageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   helmet: PropTypes.object,
 }
 

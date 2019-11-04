@@ -9,9 +9,9 @@ const Footer = class extends React.Component {
       <footer className="footer has-background-black has-text-white-ter">
         <div className="container">
           <div className="columns is-vcentered">
-            <div className="column is-6 has-text-centered-mobile footer-note">
-              Copyright © 2019 Liviu Iancuta. <br />Powered by <a href="https://gatsbyjs.org">Gatsby</a> &amp; <a
-                href="https://netlify.com">Netlify</a>
+            <div className="column is-6 has-text-centered-mobile footer-note ">
+              Copyright © 2019 Liviu Iancuta. <br />Powered by <a href="https://gatsbyjs.org" class="has-text-warning">Gatsby</a> &amp; <a
+                href="https://netlify.com" class="has-text-warning">Netlify</a>
             </div>
             <div className="column is-6">
 

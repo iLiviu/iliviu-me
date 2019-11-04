@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 
-export const ProductPageTemplate = ({
+export const ProductListPageTemplate = ({
   title,
   description,
   products,
@@ -30,7 +30,7 @@ export const ProductPageTemplate = ({
     </div>
   )
 
-ProductPageTemplate.propTypes = {
+ProductListPageTemplate.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   main: PropTypes.shape({
@@ -38,12 +38,12 @@ ProductPageTemplate.propTypes = {
   }),
 }
 
-const ProductPage = ({ data }) => {
+const ProductListPage = ({ data }) => {
   const { frontmatter } = data.main
   const { edges: products } = data.products
   return (
     <Layout>
-      <ProductPageTemplate
+      <ProductListPageTemplate
         title={frontmatter.title}
         description={frontmatter.description}
         products={products}
@@ -52,7 +52,7 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
+ProductListPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -60,10 +60,10 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default ProductListPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
+export const ProductListPageQuery = graphql`
+  query ProductListPage($id: String!) {
     main: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
@@ -75,7 +75,6 @@ export const productPageQuery = graphql`
         node {
           frontmatter {
               title
-              path
               featured
               url
               gitUrl

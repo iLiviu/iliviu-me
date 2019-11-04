@@ -13,7 +13,7 @@ const FeatureGrid = ({ items }) => (
             <p className="has-text-justified">{item.frontmatter.description}</p>
           </div>
           <footer className="card-footer">
-            <a href={item.frontmatter.url} className="card-footer-item">Mergi la aplicație</a>
+            {item.frontmatter.url && <a href={item.frontmatter.url} className="card-footer-item">Mergi la aplicație</a>}
             {item.frontmatter.gitUrl && <a href={item.frontmatter.gitUrl} className="card-footer-item">Github</a>}
           </footer>
         </div>
