@@ -2,28 +2,30 @@
 templateKey: product-page
 title: Asset Quote Service
 description: >-
-  A node.js web service that scrapes and provides the prices for a list of
-  specified assets. It currently returns prices for stocks, bonds, mutual funds,
-  cryptocurrencies and forex pairs
+  Un serviciu web creat folosind node.js ce poate fi interogat pentru a obține
+  prețul de piață pentru o listă dată de active. Serviciul folosește mai multe
+  surse publice pentru a obține prețul activelor. Momentan suportă returnarea
+  prețurilor pentru acțiuni, obligațiuni, fonduri mutuale, criptomonede și
+  valute.
 url: ''
 featured: false
 gitUrl: 'https://github.com/iLiviu/asset-quote-service'
 ---
-A node.js web service that provides the prices for a list of specified assets. It currently returns prices for stocks, bonds, mutual funds, cryptocurrencies and forex pairs
+Un serviciu web creat folosind node.js ce poate fi interogat pentru a obține prețul de piață pentru o listă dată de active. Serviciul folosește mai multe surse publice pentru a obține prețul activelor. Momentan suportă returnarea prețurilor pentru acțiuni, obligațiuni, fonduri mutuale, criptomonede și valute.
 
-Below is a list of all implemented providers and the markets that they support
+Mai jos e prezentată lista cu serviciile publice pe care aplicația le folosește pentru a obține prețurile activelor.
 
-| Provider                  | Markets                 |
-|---------------------------|:-----------------------:|
-| Binance                   | Cryptocurrencies        |
-| Boerse Frankfurt          | XETR Stocks, Intl Bonds |
-| Boerse Stuttgart          | XSTU Stocks, Intl Bonds |
-| Bursa de Valori Bucuresti | Romanian Stocks & Bonds |
-| CME                       | Commodity futures       |
-| Coinbase                  | Cryptocurrencies        |
-| Financial Times           | Mutual Funds            |
-| Fixer.io                  | Forex rates             |
-| IEX                       | US Stocks               |
-| London Stock Exchange     | XLON Stocks             |
-| Morningstar               | Intl Stocks             |
-| Yahoo Finance             | Intl Stocks             |
+| Serviciu                  | Piețe                           |
+|---------------------------|:-------------------------------:|
+| Binance                   | Criptomonede                    |
+| Boerse Frankfurt          | Acțiuni XETR, Obligațiuni intl  |
+| Boerse Stuttgart          | Acțiuni XSTU, Obligațiuni intl  |
+| Bursa de Valori Bucuresti | Acțiuni & Obligațiuni românești |
+| CME                       | Futures mărfuri                 |
+| Coinbase                  | Criptomonede                    |
+| Financial Times           | Fonduri mutuale                 |
+| Fixer.io                  | Valute                          |
+| IEX                       | US Stocks                       |
+| London Stock Exchange     | Acțiuni XLON                    |
+| Morningstar               | Acțiuni internaționale          |
+| Yahoo Finance             | Acțiuni internaționale          |
