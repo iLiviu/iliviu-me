@@ -17,6 +17,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
+        <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
       </Helmet>
       <Navbar />
       <div className="page-content">{children}</div>

@@ -12,6 +12,7 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - A simple landing page with blog functionality built with Netlify CMS
 - Editabe Pages: Landing, Product, Blog-Collection and Contact page
 - Create Blog posts from Netlify CMS
+- Automatically generated RSS feed for blog posts
 - Tags: Separate page for posts under each tag
 - Basic directory organization
 - Uses Bulma for styling, but size is reduced by `purge-css-plugin`

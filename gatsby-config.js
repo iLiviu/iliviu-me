@@ -1,10 +1,11 @@
 module.exports = {
   siteMetadata: {
     title: 'Liviu Iancuta',
-    description:
-      'Blog personal și aplicațiile publice create de mine.',
+    description: 'Blog personal și prezentare a aplicațiilor publice create de mine.',
+    siteUrl: 'https://www.iliviu.me',
   },
   plugins: [
+    'gatsby-plugin-feed',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
@@ -55,6 +56,59 @@ module.exports = {
             options: {
               destinationDir: 'static',
             },
+          },
+        ],
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.edges.map(edge => {
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.excerpt,
+                  date: edge.node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
+                ) {
+                  edges {
+                    node {
+                      excerpt
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/rss.xml',
           },
         ],
       },

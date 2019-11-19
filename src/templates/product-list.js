@@ -70,7 +70,10 @@ export const ProductListPageQuery = graphql`
         description
       }
     }
-    products: allMarkdownRemark(filter: {frontmatter: { templateKey: { eq: "product-page" } } }) {
+    products: allMarkdownRemark(
+      sort: { order: ASC, fields: [frontmatter___title] }
+      filter: {frontmatter: { templateKey: { eq: "product-page" } } }
+      ) {
       edges {
         node {
           frontmatter {
