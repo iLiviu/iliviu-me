@@ -20,7 +20,10 @@ export default class BlogIndexPage extends React.Component {
     const siteTitle = data.site.siteMetadata.title
     return (
       <Layout>
-        <Helmet title={`Blog | ${siteTitle}`} />
+        <Helmet title={`Blog | ${siteTitle}`} >
+          <meta property="og:title" content="Blog" />
+        </Helmet>
+
         <section className="section">
           <div className="container">
             <div className="columns is-multiline">

@@ -36,7 +36,10 @@ const ContactPage = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
+        <meta property="og:title" content={`${post.frontmatter.title}`} />
+      </Helmet>
+
       <ContactPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}

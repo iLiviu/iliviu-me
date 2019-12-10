@@ -5,7 +5,7 @@ date: 2019-12-10T12:00:00.000Z
 featuredimage: /img/roadtofire.png
 featuredpost: false
 description: >-
-  Azi am lansat oficial versiunea BETA (de testare) a aplicației **Road To FIRE**, o aplicație "open source" pe care o poți folosi pentru a ține evidența portofoliului tău de active. E utilă dacă ai activele împărțite la mai mulți brokeri, sau pe lângă acțiuni și obligațiuni mai ai investiții în imobiliare, criptomonede, sau chiar mărfuri/metale prețioase. 
+  Azi am lansat oficial versiunea BETA (de testare) a aplicației Road To FIRE, o aplicație "open source" pe care o poți folosi pentru a ține evidența portofoliului tău de active. E utilă dacă ai activele împărțite la mai mulți brokeri, sau pe lângă acțiuni și obligațiuni mai ai investiții în imobiliare, criptomonede, sau chiar mărfuri/metale prețioase. 
 tags:
   - FIRE
   - investitii

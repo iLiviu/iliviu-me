@@ -62,10 +62,10 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
-        <meta
-          name="description"
-          content={`${post.frontmatter.description}`}
-        />
+        <meta name="description" content={`${post.frontmatter.description}`} />
+        <meta property="og:title" content={`${post.frontmatter.title}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}${post.fields.slug}`} />
       </Helmet>
       <BlogPostTemplate
         content={post.html}
@@ -91,12 +91,16 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     site {
       siteMetadata {
+        siteUrl
         title
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY", locale: "ro")
         title

@@ -43,6 +43,7 @@ const ProductPage = ({ data }) => {
     <Layout>
       <Helmet title={`${product.frontmatter.title} | ${siteTitle}`}>
         <meta name="description" content={`${product.frontmatter.description}`} />
+        <meta property="og:url" content={`${data.site.siteMetadata.siteUrl}${product.fields.slug}`} />
       </Helmet>
       <ProductPageTemplate
         content={product.html}
@@ -66,12 +67,16 @@ export const pageQuery = graphql`
   query ProductPageByID($id: String!) {
     site {
       siteMetadata {
+        siteUrl
         title
       }
     }
     markdownRemark(id: { eq: $id }) {
       id
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         url

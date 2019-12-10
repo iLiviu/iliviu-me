@@ -46,7 +46,9 @@ const ProductListPage = ({ data }) => {
   const siteTitle = data.site.siteMetadata.title
   return (
     <Layout>
-      <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
+      <Helmet title={`${frontmatter.title} | ${siteTitle}`}>
+        <meta property="og:title" content={`${frontmatter.title}`} />
+      </Helmet>
       <ProductListPageTemplate
         title={frontmatter.title}
         description={frontmatter.description}

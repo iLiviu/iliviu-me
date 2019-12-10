@@ -14,9 +14,8 @@ const TemplateWrapper = ({ children }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="theme-color" content="#fff" />
-        <meta property="og:type" content="business.business" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
         <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
         <meta name="theme-color" content="#2b2523" />
       </Helmet>
