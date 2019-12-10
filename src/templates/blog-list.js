@@ -1,6 +1,7 @@
 import React from 'react'
-
+import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
+
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
@@ -16,8 +17,10 @@ export default class BlogIndexPage extends React.Component {
     const { currentPage, numPages } = this.props.pageContext
     const previousPage = currentPage - 1;
     const nextPage = currentPage + 1;
+    const siteTitle = data.site.siteMetadata.title
     return (
       <Layout>
+        <Helmet title={`Blog | ${siteTitle}`} />
         <section className="section">
           <div className="container">
             <div className="columns is-multiline">
@@ -75,6 +78,11 @@ export default class BlogIndexPage extends React.Component {
 
 export const pageQuery = graphql`
   query blogPageQuery($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
@@ -83,18 +91,18 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 400)
           fields {
             slug
           }
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD, YYYY", locale: "ro")
             featuredpost
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 240, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

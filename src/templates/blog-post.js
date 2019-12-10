@@ -13,23 +13,25 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  date,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
     <section className="section">
-      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-            <p>{description}</p>
+            <span className="subtitle is-size-5 is-block">
+              {date}
+            </span>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4>Etichete</h4>
                 <ul className="taglist">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
@@ -51,29 +53,27 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
 }
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout>
+      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`}>
+        <meta
+          name="description"
+          content={`${post.frontmatter.description}`}
+        />
+      </Helmet>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title>{`${post.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${post.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
       />
     </Layout>
   )
@@ -89,11 +89,16 @@ export default BlogPost
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM DD, YYYY", locale: "ro")
         title
         description
         tags

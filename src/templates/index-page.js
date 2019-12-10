@@ -20,9 +20,9 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <h1 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
-              </h1>
+              </h2>
               <h3>{subheading}</h3>
             </div>
           </div>
@@ -53,9 +53,9 @@ export const IndexPageTemplate = ({
         <div className="container">
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">
+              <h1 className="title">
                 Ultimele Postări
-                  </h3>
+              </h1>
               <BlogRoll posts={blogPosts} />
               <div className="column is-12 has-text-centered">
                 <Link className="btn" to="/blog">
@@ -150,11 +150,11 @@ export const pageQuery = graphql`
           frontmatter {
             title
             templateKey
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MMMM DD, YYYY", locale: "ro")
             featuredpost
             featuredimage {
               childImageSharp {
-                fluid(maxWidth: 120, quality: 100) {
+                fluid(maxWidth: 240, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

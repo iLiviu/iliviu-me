@@ -15,7 +15,6 @@ export const ProductPageTemplate = ({
 
   return (
     <section className="section">
-      {helmet || ''}
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
@@ -34,27 +33,21 @@ ProductPageTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   title: PropTypes.string.isRequired,
-  helmet: PropTypes.object,
 }
 
 const ProductPage = ({ data }) => {
   const { markdownRemark: product } = data
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout>
+      <Helmet title={`${product.frontmatter.title} | ${siteTitle}`}>
+        <meta name="description" content={`${product.frontmatter.description}`} />
+      </Helmet>
       <ProductPageTemplate
         content={product.html}
         contentComponent={HTMLContent}
         description={product.frontmatter.description}
-        helmet={
-          <Helmet titleTemplate="%s | Products">
-            <title>{`${product.frontmatter.title}`}</title>
-            <meta
-              name="description"
-              content={`${product.frontmatter.description}`}
-            />
-          </Helmet>
-        }
         title={product.frontmatter.title}
       />
     </Layout>
@@ -71,6 +64,11 @@ export default ProductPage
 
 export const pageQuery = graphql`
   query ProductPageByID($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       html

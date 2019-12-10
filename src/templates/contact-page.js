@@ -1,6 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
@@ -30,9 +32,11 @@ ContactPageTemplate.propTypes = {
 
 const ContactPage = ({ data }) => {
   const { markdownRemark: post } = data
+  const siteTitle = data.site.siteMetadata.title
 
   return (
     <Layout>
+      <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
       <ContactPageTemplate
         contentComponent={HTMLContent}
         title={post.frontmatter.title}
@@ -50,6 +54,11 @@ export default ContactPage
 
 export const contactPageQuery = graphql`
   query ContactPage($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

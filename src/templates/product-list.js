@@ -1,6 +1,8 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
+
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 
@@ -12,19 +14,19 @@ export const ProductListPageTemplate = ({
     <div className="content">
       <section className="section section--gradient">
         <div className="container">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                  {title}
-                </h2>
-                <p>{description}</p>
-              </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {title}
+              </h2>
+              <p>{description}</p>
             </div>
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <Features items={products} />
-              </div>
+          </div>
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <Features items={products} />
             </div>
+          </div>
         </div>
       </section>
     </div>
@@ -41,8 +43,10 @@ ProductListPageTemplate.propTypes = {
 const ProductListPage = ({ data }) => {
   const { frontmatter } = data.main
   const { edges: products } = data.products
+  const siteTitle = data.site.siteMetadata.title
   return (
     <Layout>
+      <Helmet title={`${frontmatter.title} | ${siteTitle}`} />
       <ProductListPageTemplate
         title={frontmatter.title}
         description={frontmatter.description}
@@ -64,6 +68,11 @@ export default ProductListPage
 
 export const ProductListPageQuery = graphql`
   query ProductListPage($id: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
     main: markdownRemark(id: { eq: $id }) {
       frontmatter {
         title
