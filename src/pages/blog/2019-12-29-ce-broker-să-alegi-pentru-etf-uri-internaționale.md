@@ -14,7 +14,14 @@ description: >-
 featuredpost: false
 featuredimage: /img/balance.png
 tags:
-  - brokeri ETF investitii comparatie etoro InteractiveBrokers saxo xtb
+  - brokeri
+  - ETF
+  - investitii
+  - comparatie
+  - etoro
+  - InteractiveBrokers
+  - saxo
+  - xtb
 ---
 ![Balance](/img/balance.png)
 
