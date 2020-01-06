@@ -10,6 +10,13 @@ const Navbar = class extends React.Component {
     }
   }
 
+  hamburgerKeyDown = (ev) => {
+    // check keys if you want
+    if (ev.keyCode === 13) {
+      this.toggleHamburger()
+    }
+  }
+
   toggleHamburger = () => {
     // toggle the active boolean in the state
     this.setState(
@@ -21,11 +28,11 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
+            navBarActiveClass: 'is-active',
+          })
           : this.setState({
-              navBarActiveClass: '',
-            })
+            navBarActiveClass: '',
+          })
       }
     )
   }
@@ -41,17 +48,16 @@ const Navbar = class extends React.Component {
           <div className="navbar-brand">
             <Link to="/" className="navbar-item">
               ILiviu.me
-            </Link>		  
+            </Link>
             {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+            <button tabIndex="0" className={`navbar-burger burger button-link ${this.state.navBarActiveClass}`}
+              aria-label="menu" aria-expanded={this.state.active} data-target="navMenu" onClick={this.toggleHamburger}
+              onKeyDown={this.hamburgerKeyDown}
             >
-              <span />
-              <span />
-              <span />
-            </div>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </button>
           </div>
           <div
             id="navMenu"
