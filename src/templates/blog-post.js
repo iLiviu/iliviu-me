@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 export const BlogPostTemplate = ({
   content,
@@ -14,9 +15,14 @@ export const BlogPostTemplate = ({
   title,
   helmet,
   date,
+  slug,
+  siteUrl,
 }) => {
   const PostContent = contentComponent || Content
-
+  let disqusConfig = {
+    url: `${ siteUrl }${ slug }`,
+    title: title,
+  }
   return (
     <section className="section">
       <div className="container content">
@@ -41,6 +47,7 @@ export const BlogPostTemplate = ({
                 </ul>
               </div>
             ) : null}
+            <Disqus config={disqusConfig} />
           </div>
         </div>
       </div>
@@ -74,6 +81,8 @@ const BlogPost = ({ data }) => {
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
         date={post.frontmatter.date}
+        slug={post.fields.slug}
+        siteUrl={data.site.siteMetadata.siteUrl}
       />
     </Layout>
   )
