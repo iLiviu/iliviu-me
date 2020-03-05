@@ -37,4 +37,6 @@ Așa că, înarmat cu timp liber și chef de documentare, am scormonit internetu
 ## Concluzie
 Informațiile de mai sus au fost suficiente pentru mine încât să mă facă să nu mă ating de Capital Way. Au fost atât de grave, încât am zis că trebuie să le împărtășesc și altora.  Cel mai probabil "botul" acesta nu există, iar dacă ai apucat deja să retragi mai mulți bani decât ai băgat, cel mai probabil ai făcut-o din depunerile altor clienți. Tu ai câștigat bani pentru că, asemeni oricărei scheme Ponzi, primii clienți sunt singurii care fac bani. Cine știe, poate schema mai ține mult timp de acum încolo și poate mai scoți bani o vreme. Îți place să te joci cu focul?
 
+Bonus: Un articol similar în engleză: <https://bondreview.co.uk/2019/04/10/we-review-capital-way-anonymous-forex-scam-with-falsified-track-record/>
+
 **Atenție:** Datele de mai sus nu trebuie luate ca atare de către cititor. Este necesară o documentare și o analiză personală înainte de luarea unei decizii.
