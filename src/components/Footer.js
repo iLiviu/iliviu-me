@@ -11,7 +11,7 @@ const Footer = class extends React.Component {
         <div className="container">
           <div className="columns is-vcentered">
             <div className="column is-6 has-text-centered-mobile footer-note ">
-              Copyright © 2019 Liviu Iancuta. <br />Powered by <a href="https://gatsbyjs.org" className="has-text-warning">Gatsby</a> &amp; <a
+              Copyright © 2020 Liviu Iancuta. <br />Powered by <a href="https://gatsbyjs.org" className="has-text-warning">Gatsby</a> &amp; <a
                 href="https://netlify.com" className="has-text-warning">Netlify</a>
             </div>
             <div className="column is-6">
