@@ -23,6 +23,7 @@ tags:
   - saxo
   - xtb
 ---
+
 ![Balance](/img/balance.png)
 
 
@@ -65,6 +66,20 @@ Cel puțin pentru nevoile mele, cea mai bună alegere. Totuși, pentru investito
 ### Dezavantaje:
 * Dacă ai un portofoliu mai mic de 100.000 USD, taxa lunară de utilizare e 10 USD, din care se scade valoarea comisioanelor ordinelor executate în luna respectivă. 
 * Platforma desktop destul de greoaie pentru investitorul începător.
+
+
+## TradeStation Global
+Sunt "introducing broker" pentru Interactive Brokers (IB). Ce înseamnă asta? Înseamnă ca de fapt sunt un intermediar între tine și IB. Contul tău este deschis de fapt la Interactive Brokers, banii sunt depozitați la IB, acțiunile sunt în custodia IB, suportul pentru activitatea de brokeraj îl primești de la IB. Diferența importantă e că beneficiezi de alte comisioane, care sunt aproape la fel de mici ca la IB, dar marele avantaj e că nu plătești taxă lunară. 
+
+### Avantaje:
+* Comisioane de tranzacționare mici: pentru bursele europene comision fix de 0.12% (minim 1.75 EUR) la care se adaugă comisionul bursei pe care tranzacționezi (trebuie sa verifici [aici]([https://www.tradestation-international.com/global/exchange-fees/](https://www.tradestation-international.com/global/exchange-fees/)) comisioanele pentru fiecare bursă în parte.)
+* Fără taxe de custodie.
+* Managementul de cont se face din platforma web a Interactive Brokers, așa că ai access la aceleași facilități.
+* Comision de schimb valutar de 0.006% (minim 2 USD).
+
+### Dezavantaje:
+* Dacă ai un portofoliu mai mare de 100.000 USD sau comisioanele lunare pe tranzacții sunt mai mari de 10$, vei ajunge să plătești mai mult decât ai plăti dacă ai avea cont deschis direct la Interactive Brokers.
+* Dacă tranzacționezi cu Margin, dobânda este cea de la Interactive Brokers + 2.5%.
 
 
 ## Saxo Bank - contul "classic"
