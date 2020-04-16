@@ -21,6 +21,8 @@ tags:
 ---
 ![Scam Alert](/img/scam-alert.jpg)
 
+__Actualizare 16 aprilie__: Am făcut o analiză mai amănunțită cu dovezi exacte într-un articol nou. [Citește-l aici!](/blog/2020-04-16-capital_way_episodul_2_-_demascarea_fraudei/)
+
 Răsfoind zilele astea Facebook-ul, am dat peste ceea ce pare la prima vedere un bot public de Forex foarte bun, ce se laudă cu câștiguri de peste 50%/an.  Pare prea frumos să fie adevărat? Ei bine, din proprie experiență (am făcut și eu un bot de tranzacționare la viața mea) îți pot spune că șansele ca acest bot să fie legit sunt **aproape nule**. 
 Așa că, înarmat cu timp liber și chef de documentare, am scormonit internetul ca să văd ce aflu despre ei. Și iată ce am găsit:
 
@@ -29,7 +31,7 @@ Așa că, înarmat cu timp liber și chef de documentare, am scormonit internetu
 * au pagină de Facebook (search Capital Way la pagini) creată **DOAR in 18 februarie 2019**, dar cu toate acestea, au postări cu data setată manual până în **2013**. Un alt mare steag roșu că încearcă să înșele clienții.
 * Conform termenilor și condițiilor site-ului, compania care deține bot-ul este "Eastridge Capital Ltd", care a fost înregistrată într-un paradis fiscal (Marshall Islands) in **10 iulie 2018**, **nicidecum în 2013** după cum se laudă pe site. (informațiile se pot verifica pe <https://www.register-iri.com/corporate/business-entities/entity-search/>
 * Compania care se ocupa efectiv de banii clienților (Capital Way Group) e înregistrată în **Bulgaria** (țara de baștină a OneCoin pentru cunoscători), și fac tot posibilul să se delimiteze de eventualele pierderi pe care ți le va cauza Eastridge Capital Ltd și botul lor. Cu alte cuvinte, când prea multă lume o să încerce să își retragă banii, îți vor spune: Ne pare rău, botul a făcut o tranzacție foarte proastă și am pierdut toți banii. Pe lângă asta, domeniul capitalway-group.com e înregistrat prima dată în  **16 ianuarie 2019**.
-* Nu am verificat, pentru ca nu am cont (și nu am de gând să îmi fac) dar bănuiesc că nu vezi niciodată "pozițiile" deschise și prețul de deschidere. Vezi doar istoricul după ce "poziția" a fost închisă. Astfel se pot falsifica foarte ușor niște tranzacții care nu s-au executat niciodată în realitate. Dacă într-adevăr poți vedea poziția deschisă și prețul de deschidere înainte ca ea sa fie închisă și poți verifica dintr-o sursă separată că exact acela era prețul la momentul deschiderii, eu îmi retrag acuzația.
+* ~~Nu am verificat, pentru ca nu am cont (și nu am de gând să îmi fac) dar bănuiesc că nu vezi niciodată "pozițiile" deschise și prețul de deschidere. Vezi doar istoricul după ce "poziția" a fost închisă. Astfel se pot falsifica foarte ușor niște tranzacții care nu s-au executat niciodată în realitate. Dacă într-adevăr poți vedea poziția deschisă și prețul de deschidere înainte ca ea sa fie închisă și poți verifica dintr-o sursă separată că exact acela era prețul la momentul deschiderii, eu îmi retrag acuzația.~~ **Actualizare**: metoda exactă de falsificare e detaliată în [articolul nou](/blog/2020-04-16-capital_way_episodul_2_-_demascarea_fraudei/)
  
 Îți spun din proprie experiență: boți cu asemenea profituri nu sunt făcuți niciodată publici, repet **NICIODATĂ**. Cu cât rulezi mai mulți bani, cu atât scade procentul de câștig pe care îl poți obține. Nu e nimeni prost să împartă cu tine profitul, când pot avea acces la bani prin alte moduri. Așadar, dacă vezi  asemenea produse, cu câștiguri procentuale lunare așa mari, fugi de ele ca de dracu'.
 
