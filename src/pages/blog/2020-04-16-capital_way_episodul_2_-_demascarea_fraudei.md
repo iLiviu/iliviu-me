@@ -23,8 +23,8 @@ tags:
 
  Atașez mai jos exemple de poziții falsificate. Dacă nu ar fi fost aceste tranzacții false, balanța contului tău ar fi afișat de mult valoarea **0**. Menționez că toate orele sunt în timezone **UTC**, în caz că vrei să verifici și tu:
 
-- O înregistrare video care surprinde live manipularea prețului de deschidere. Dacă te uiți la bid-ask pentru XBTUSD vei vedea că la momentul executării tranzacției de cumpărare de la ora **08:38:07 din 16.04.2020** , intervalul era mult în afara prețului de **6965.99** la care botul a "deschis" poziția. Iar dacă te uiți pe grafic vezi ca nu s-au mai efectuat de minute bune tranzacții apropiate de acel preț (zic apropiate, pentru că exact la acel preț nu s-au efectuat deloc. Nici o lumânare recentă la minut nu cuprinde acest preț).  Notă: Ignoră fereastra de Chrome din stânga, voiam să o folosesc  pentru verificarea prețului de la alt exchange, dar Chrome a decis să nu mai actualizeze conținutul ferestrei): 
-[![Proba video](/img/capitalway_scam_vid1.png)](https://drive.google.com/open?id=18RE9LcQMCR-SCDXSSzgoQtF-LUNN0y1U)
+- O înregistrare video care surprinde live manipularea prețului de deschidere. Dacă te uiți la bid-ask pentru XBTUSD vei vedea că la momentul executării tranzacției de cumpărare de la ora **08:38:07 din 16.04.2020** , intervalul era mult în afara prețului de **6965.99** la care botul a "deschis" poziția. Iar dacă te uiți pe grafic vezi ca nu s-au mai efectuat de minute bune tranzacții apropiate de acel preț (zic apropiate, pentru că exact la acel preț nu s-au efectuat deloc. Nici o lumânare recentă la minut nu cuprinde acest preț).  
+[![Proba video](/img/capitalway_scam_vid1.png)](https://drive.google.com/open?id=1Ufe27hPN_g6RsIYa3TM8VXh0sIwpcy9C)
 
 &nbsp;
 
