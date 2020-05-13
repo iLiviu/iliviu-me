@@ -5,7 +5,6 @@ module.exports = {
     siteUrl: 'https://www.iliviu.me',
   },
   plugins: [
-    'gatsby-plugin-feed',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     {
@@ -107,6 +106,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
+            title: 'Liviu Iancuta',
           },
         ],
       },

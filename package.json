@@ -5,7 +5,7 @@
   "author": "Liviu Iancuta",
   "dependencies": {
     "bulma": "^0.8.0",
-    "gatsby": "^2.18.17",
+    "gatsby": "^2.21.24",
     "gatsby-image": "^2.2.37",
     "gatsby-plugin-disqus": "^1.1.4",
     "gatsby-plugin-feed": "^2.3.25",
@@ -23,8 +23,8 @@
     "gatsby-transformer-sharp": "^2.3.9",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
-    "netlify-cms-app": "^2.10.1",
-    "node-sass": "^4.13.0",
+    "netlify-cms-app": "^2.12.12",
+    "node-sass": "^4.14.1",
     "parcel-bundler": "^1.9.4",
     "prop-types": "^15.6.0",
     "react": "^16.12.0",
@@ -40,7 +40,8 @@
   "scripts": {
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
+    "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
+    "build-win": "set GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true && gatsby build --log-pages",
     "develop": "npm run clean && gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
